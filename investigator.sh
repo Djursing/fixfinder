@@ -56,7 +56,7 @@ done
 
 # Main command
 git log -E --grep "${grep_string}" --name-only --pretty=format: --since "${since_date}" |
-    sed -r "/^\n*$/d" |
-    sort |
-    uniq -c |
-    sort -r
+    sed -r "/^\n*$/d" | # Remove empty lines
+    sort | # Sort the output before uniq, or uniq won't work as expected
+    uniq -c | # Count the occurrence of each file
+    sort -r  # Sort the output in descending order
