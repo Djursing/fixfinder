@@ -19,7 +19,6 @@ Help() {
     echo
 }
 
-
 # Helper function to check if a command exists on the system
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -57,6 +56,6 @@ done
 # Main command
 git log -E --grep "${grep_string}" --name-only --pretty=format: --since "${since_date}" |
     sed -r "/^\n*$/d" | # Remove empty lines
-    sort | # Sort the output before uniq, or uniq won't work as expected
-    uniq -c | # Count the occurrence of each file
-    sort -r  # Sort the output in descending order
+    sort | # Sort output before uniq, or uniq won't work as expected
+    uniq -c | # Count occurrence of each file
+    sort -r  # Sort output in descending order
