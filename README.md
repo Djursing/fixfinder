@@ -1,16 +1,14 @@
-# investigator
+# fixfinder
 
 *Inspired by "Your Code as a Crime Scene" by Adam Tornhill (yet to be read)*
 
-Investigator is a tool designed to analyze and highlight frequent modifications in files over a specified period based on commit messages.
+This script helps to identify "hotspots" in your codebase by listing files frequently adjusted in commits related to bug fixes or other issues. These files are often the most complex and error-prone parts of your codebase, and might be good candidates for refactoring or further investigation.
 
-This script helps to identify "hotspots" in your codebase, areas frequently adjusted in commits related to bug fixes or other issues might benefit from refactoring.
-
-The tool isn't limited to finding bugs, it's versatile enough to handle any type of commit description and time frame you might be interested in exploring.
+The tool is versatile enough to handle any type of commit description and time frame you might be interested in exploring.
 
 ## Getting Started
 
-To get Investigator up and running on your machine, follow these steps:
+To get fixfinder up and running on your machine, follow these steps:
 
 ### Prerequisites
 Make sure you have `git` and `sed` installed on your system, as they are essential for the script to function correctly.
@@ -18,22 +16,22 @@ Make sure you have `git` and `sed` installed on your system, as they are essenti
 ### Installation
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/djursing/investigator.git
+git clone https://github.com/djursing/fixfinder.git
 ```
 
 2. **Navigate to the repository:**
 ```bash
-cd investigator
+cd fixfinder
 ```
 
 3. **Make the script executable:**
 ```bash
-chmod +x investigator.sh
+chmod +x fixfinder.sh
 ```
 
 ### Usage
 ```
-./investigator.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
+./fixfinder.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
 ```
 
 ### Options
