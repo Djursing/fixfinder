@@ -1,4 +1,4 @@
-# fixfinder
+# hotspot
 
 *Inspired by "Your Code as a Crime Scene" by Adam Tornhill (yet to be read)*
 
@@ -8,7 +8,7 @@ The tool is versatile enough to handle any type of commit description and time f
 
 ## Getting Started
 
-To get fixfinder up and running on your machine, follow these steps:
+To get hotspot up and running on your machine, follow these steps:
 
 ### Prerequisites
 Make sure you have `git` and `sed` installed on your system, as they are essential for the script to function correctly.
@@ -16,22 +16,22 @@ Make sure you have `git` and `sed` installed on your system, as they are essenti
 ### Installation
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/djursing/fixfinder.git
+git clone https://github.com/djursing/hotspot.git
 ```
 
 2. **Navigate to the repository:**
 ```bash
-cd fixfinder
+cd hotspot
 ```
 
 3. **Make the script executable:**
 ```bash
-chmod +x fixfinder.sh
+chmod +x hotspot.sh
 ```
 
 ### Usage
 ```
-./fixfinder.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
+./hotspot.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
 ```
 
 ### Options
