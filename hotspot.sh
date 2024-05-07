@@ -58,4 +58,4 @@ git log -E --grep "${grep_string}" --name-only --pretty=format: --since "${since
     sed -r "/^\n*$/d" | # Remove empty lines
     sort | # Sort output before uniq, or uniq won't work as expected
     uniq -c | # Count occurrence of each file
-    sort -r  # Sort output in descending order
+    sort -n  # Sort output by number ASC
