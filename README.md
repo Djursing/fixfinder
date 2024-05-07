@@ -29,9 +29,27 @@ cd hotspot
 chmod +x hotspot.sh
 ```
 
+3. **Move to local bin folder:**
+```bash
+mv ./hotspot.sh /usr/local/bin/hotspot
+```
+
+4. **PATH (optional):**\
+Make sure your path includes `/usr/local/bin`\
+Here are some ways to do it with `.profile` and `.bashrc`.
+```
+# ~/.profile
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# ~/.bashrc
+export PATH=$PATH:/usr/local/bin
+```
+
 ### Usage
 ```
-./hotspot.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
+hotspot.sh [-g|--grep GREP_STRING] [-s|--since SINCE_DATE]
 ```
 
 ### Options
